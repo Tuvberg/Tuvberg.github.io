@@ -39,7 +39,21 @@
     var clicks = 0;
       function myFunction() {
         clicks++;
-        document.getElementById("changeMessage").innerHTML = "You clicked the button "+clicks+" too many times";
+        if (clicks = 1) {
+        document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": Can you hear me?";
+        }
+        if (clicks = 2) {
+        document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": When we were younger and free";
+        }
+        if (clicks = 3) {
+        document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": I must have called a thousand times";
+        }
+        if (clicks = 4) {
+        document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": But when I call you never seem to be home";
+        }
+        if (clicks > 4) {
+        document.getElementById("changeMessage").innerHTML = " You've clicked "+clicks+" times. You're done. Reload to run through lyrics again";
+        }
         console.log(clicks);
       }
     </script>
@@ -62,8 +76,7 @@
   <br>
   <img src="https://lh3.googleusercontent.com/dT0SumPaV6pY2Drle9pSJW_SwXC2-8UxuN305_29zBp23SbfeU_6R2to0mcAEaLdXnOs8i4X=s192-c-e100" alt="picture of Adele" style="width:200px;height:200px;"
     <a href="https://play.google.com/music/preview/Tq7imsrjsxoxeudqgwf5l7rghmi?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics&u=0#">Full lyrics from Google Play</a>
-    <h1>JavaScript in Action!</h1>
-    <p id="changeMessage">Click the Button</p>
-    <button type="button" onclick="myFunction()">Try it</button>
+    <p id="changeMessage">Click the Button for the next hidden line</p>
+    <button type="button" onclick="myFunction()">Get hidden lyrics</button>
   </body>
 </html>
