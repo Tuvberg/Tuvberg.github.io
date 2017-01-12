@@ -78,5 +78,16 @@
     <a href="https://play.google.com/music/preview/Tq7imsrjsxoxeudqgwf5l7rghmi?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics&u=0#">Full lyrics from Google Play</a>
     <p id="changeMessage">Click the Button for the next hidden line</p>
     <button type="button" onclick="myFunction()">Get hidden lyrics</button>
+  <h1>Color Madness</h1>
+  <p id="demo">Change Page Style!</p>
+  <script>
+    function myFunction() {
+      document.body.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+      var x = document.getElementById("demo");
+      x.style.fontSize = "25px";
+      x.style.color = "red";
+    }
+  </script>
+  <button type="button" onclick="myFunction()">Change!</button>
   </body>
 </html>
