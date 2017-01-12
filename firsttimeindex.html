@@ -39,16 +39,16 @@
     var clicks = 0;
       function myFunction() {
         clicks++;
-        if (clicks = 1) {
+        if (clicks == 1) {
         document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": Can you hear me?";
         }
-        if (clicks = 2) {
+        if (clicks == 2) {
         document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": When we were younger and free";
         }
-        if (clicks = 3) {
+        if (clicks == 3) {
         document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": I must have called a thousand times";
         }
-        if (clicks = 4) {
+        if (clicks == 4) {
         document.getElementById("changeMessage").innerHTML = " Hidden line "+clicks+": But when I call you never seem to be home";
         }
         if (clicks > 4) {
@@ -78,16 +78,25 @@
     <a href="https://play.google.com/music/preview/Tq7imsrjsxoxeudqgwf5l7rghmi?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics&u=0#">Full lyrics from Google Play</a>
     <p id="changeMessage">Click the Button for the next hidden line</p>
     <button type="button" onclick="myFunction()">Get hidden lyrics</button>
-  <h1>Color Madness</h1>
-  <p id="demo">Change Page Style!</p>
-  <script>
-    function myFunction() {
-      document.body.style.backgroundColor = '#'+Math.floor(Math.random()*16777215).toString(16);
-      var x = document.getElementById("demo");
-      x.style.fontSize = "25px";
-      x.style.color = "red";
-    }
-  </script>
-  <button type="button" onclick="myFunction()">Change!</button>
+    <h1>JavaScript Form Input</h1>
+ <p>Or guess a line of lyrics</p>
+ <input id="input">
+ <button type="button" onclick="myFunction()">I did it</button>
+ <p id="demo"></p>
+ <script>
+   function myFunction() {
+     var answer, text;
+     answer = document.getElementById("input").value;
+     if (answer == "Can you hear me?" OR "When we were younger and free" OR "I must have called a thousand times" OR "But when I call you never seem to be home") {
+      text = "Nice! You know the lyrics to Hello";
+     } else {
+      text = "Wrong! Wrong! Wrong!";
+      delay(5000)
+      text = "Seriously. Try again or just pack up and go.";
+     }
+
+     document.getElementById("demo").innerHTML = text;
+   }
+ </script>
   </body>
 </html>
