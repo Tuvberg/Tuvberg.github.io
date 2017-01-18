@@ -57,6 +57,23 @@
         console.log(clicks);
       }
     </script>
+    <script>
+      function myFunc() {
+        var answer, text;
+        answer = document.getElementById("input").value;
+        if (answer == "Can you hear me?" || answer == "When we were younger and free" || answer == "I must have called a thousand times" || answer == "But when I call you never seem to be home") {
+         text = "Nice! You know the lyrics to Hello";
+        } else {
+         text = "Wrong! Wrong! Wrong!";
+         setTimeout(function () {
+
+         }, 5);
+         text = "Seriously. Try again or just pack up and go.";
+        }
+
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
   </head>
   <body bgcolor = #00abc1>
     <p>Fill in the blanks/wingdings</p>
@@ -78,25 +95,10 @@
     <a href="https://play.google.com/music/preview/Tq7imsrjsxoxeudqgwf5l7rghmi?lyrics=1&utm_source=google&utm_medium=search&utm_campaign=lyrics&pcampaignid=kp-lyrics&u=0#">Full lyrics from Google Play</a>
     <p id="changeMessage">Click the Button for the next hidden line</p>
     <button type="button" onclick="myFunction()">Get hidden lyrics</button>
-    <h1>JavaScript Form Input</h1>
- <p>Or guess a line of lyrics</p>
- <input id="input">
- <button type="button" onclick="myFunction()">I did it</button>
- <p id="demo"></p>
- <script>
-   function myFunction() {
-     var answer, text;
-     answer = document.getElementById("input").value;
-     if (answer == "Can you hear me?" OR "When we were younger and free" OR "I must have called a thousand times" OR "But when I call you never seem to be home") {
-      text = "Nice! You know the lyrics to Hello";
-     } else {
-      text = "Wrong! Wrong! Wrong!";
-      delay(5000)
-      text = "Seriously. Try again or just pack up and go.";
-     }
+    <p>Or guess a line of lyrics</p>
+    <input id="input">
+    <button type="button" onclick="myFunc()">I did it</button>
+    <p id="demo"></p>
 
-     document.getElementById("demo").innerHTML = text;
-   }
- </script>
   </body>
 </html>
