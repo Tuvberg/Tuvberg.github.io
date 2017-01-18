@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Basic IOT button</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body bgcolor="black">
+    <button type="ledOn" onclick="ledOn()">On</button>
+    <button type="ledOff" onclick="ledOff()">Off</button>
+    <button type="toggleLed" onclick="toggleLed()">toggle</button>
+
+    <script>
+        var clicks = 0;
+
+        function ledOn() {
+            console.log("LED is on");
+            clicks = 1;
+            $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+                    value: "on"
+                },                                          //optional 3 debug lines
+                function(error, response, body) {           //optional 3 debug lines
+                    console.log(error, response, body);     //optional 3 debug lines
+                });
+        }
+
+        function ledOff() {
+            console.log("LED is off");
+            clicks = 0;
+            $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+                value: "off"
+            });
+        }
+
+        function toggleLed() {
+            if (clicks % 2 == 0) {
+                console.log("LED toggle on");
+                $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+                    value: "on"
+                });
+                clicks++;
+            } else {
+                console.log("LED toggle off");
+                clicks++;
+                $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+                    value: "off"
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
