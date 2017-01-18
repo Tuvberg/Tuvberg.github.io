@@ -18,7 +18,7 @@
         function ledOn() {
             console.log("LED is on");
             clicks = 1;
-            $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+            $.post("https://api.particle.io/v1/devices/410025000547343232363230/led?access_token=c2289ebaf110de5494246b0bfcc135d37ac71f7d", {
                     value: "on"
                 },                                          //optional 3 debug lines
                 function(error, response, body) {           //optional 3 debug lines
@@ -29,7 +29,7 @@
         function ledOff() {
             console.log("LED is off");
             clicks = 0;
-            $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+            $.post("https://api.particle.io/v1/devices/410025000547343232363230/led?access_token=c2289ebaf110de5494246b0bfcc135d37ac71f7d", {
                 value: "off"
             });
         }
@@ -37,14 +37,14 @@
         function toggleLed() {
             if (clicks % 2 == 0) {
                 console.log("LED toggle on");
-                $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+                $.post("https://api.particle.io/v1/devices/410025000547343232363230/led?access_token=c2289ebaf110de5494246b0bfcc135d37ac71f7d", {
                     value: "on"
                 });
                 clicks++;
             } else {
                 console.log("LED toggle off");
                 clicks++;
-                $.post("https://api.particle.io/v1/devices/deviceID/led?access_token=", {
+                $.post("https://api.particle.io/v1/devices/410025000547343232363230/led?access_token=c2289ebaf110de5494246b0bfcc135d37ac71f7d", {
                     value: "off"
                 });
             }
