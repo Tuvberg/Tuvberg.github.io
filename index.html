@@ -4,14 +4,18 @@
   </head>
   <body>
   <h1>Outstanding questions</h1>
+  <p>Note: now using Jawbone, not Fitbit.</p>
   <p>-How do you build a relay into a power strip? How do you make a Photon trigger a relay?</p>
     <p>     -Mr. Kleindolph says the wiring is really easy, and he can show it to me.</p>
     <p>-How do you make a Photon monitor and react to changes in a Google Sheet?</p>
     <p>     -Look at code of IFTTT program.</p>
-    <p>-Is Google Sheets the best tool to use? Is there a better IFTTT applet? Should I use heart rate/another proxy variable instead?</p>
-    <p>     -Research how fitbits record sleep. Also inspect other IFTTT applets.</p>
   <h1>Drawing of device</h1>
   <img src='design_drawing.jpg' alt="Design and explanation for device" style="width:1000px;height:500px";/>
+  <p> 1. Jawbone notices wearer is asleep. </p>
+  <p> 2. Using an IFTTT program, the Jawbone records sleep data on a Google Sheet. </p>
+  <p> 3. When new data indicates that the wearer is sleeping, Photon starts its program <p>
+  <p> 4. This program triggers a relay, shutting off the power strip. </p>
+  <p> 5. Without power, the TV turns off. </p>
   <h1>Brainstorming</h1>
   <img src='brainstorming_screenshot_1.png' alt="Brainstorming for device"/>
   <img src='brainstorming_screenshot_2.png' alt="Brainstorming for device"/>
